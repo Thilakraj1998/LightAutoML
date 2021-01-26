@@ -284,6 +284,10 @@ class SqlEngineInfo:
     connection_string: str
     query: str
 
+    def __init__(self, connection_string: str, query: str):
+        self.connection_string = connection_string
+        self.query = query
+
 
 @record_history(enabled=False)
 class SqlBatchGenerator(DfBatchGenerator):
